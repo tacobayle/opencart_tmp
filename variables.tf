@@ -19,7 +19,7 @@ variable "vcenter" {
     cluster = "sof2-01-vc08c01"
     datastore = "sof2-01-vc08c01-vsan"
     resource_pool = "sof2-01-vc08c01/Resources"
-    folder = "NicTfVmw"
+    folder = "NicTfOpencart"
     networkMgmt = "vxw-dvs-34-virtualwire-3-sid-1080002-sof2-01-vc08-avi-mgmt"
   }
 }
@@ -71,7 +71,7 @@ variable "ansible" {
     aviConfigureTag = "v3.53"
     version = "2.9.12"
     opencartInstallUrl = "https://github.com/tacobayle/ansibleOpencartInstall"
-    opencartInstallTag = "v1.19"
+    opencartInstallTag = "v1.22"
     directory = "ansible"
     jsonFile = "~/fromTf.json"
     yamlFile = "~/fromTf.yml"

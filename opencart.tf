@@ -1,6 +1,6 @@
 resource "vsphere_tag" "ansible_group_opencart" {
-  name             = "opencart"
-  category_id      = vsphere_tag_category.ansible_group_opencart.id
+  name             = "opencart_tmp"
+  category_id      = vsphere_tag_category.ansible_group_opencart_tmp.id
 }
 
 data "template_file" "opencart_userdata" {

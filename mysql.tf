@@ -1,7 +1,7 @@
 
 resource "vsphere_tag" "ansible_group_mysql" {
-  name             = "mysql"
-  category_id      = vsphere_tag_category.ansible_group_mysql.id
+  name             = "mysql_tmp"
+  category_id      = vsphere_tag_category.ansible_group_mysql_tmp.id
 }
 
 data "template_file" "mysql_userdata" {

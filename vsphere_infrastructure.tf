@@ -69,86 +69,17 @@ resource "vsphere_folder" "folder" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-resource "vsphere_folder" "folderSe" {
-  path          = var.lsc.serviceEngineGroup.folder
-  type          = "vm"
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
 
-resource "vsphere_tag_category" "ansible_group_backend_lsc" {
-  name = "ansible_group_backend_lsc"
+resource "vsphere_tag_category" "ansible_group_mysql_tmp" {
+  name = "ansible_group_mysql_tmp"
   cardinality = "SINGLE"
   associable_types = [
     "VirtualMachine",
   ]
 }
 
-resource "vsphere_tag_category" "ansible_group_backend_vmw" {
-  name = "ansible_group_backend_vmw"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_client" {
-  name = "ansible_group_client"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_controller" {
-  name = "ansible_group_controller"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_jump" {
-  name = "ansible_group_jump"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_mysql" {
-  name = "ansible_group_mysql"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_opencart" {
-  name = "ansible_group_opencart"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_se" {
-  name = "ansible_group_se"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_master" {
-  name = "ansible_group_master"
-  cardinality = "SINGLE"
-  associable_types = [
-    "VirtualMachine",
-  ]
-}
-
-resource "vsphere_tag_category" "ansible_group_worker" {
-  name = "ansible_group_worker"
+resource "vsphere_tag_category" "ansible_group_opencart_tmp" {
+  name = "ansible_group_opencart_tmp"
   cardinality = "SINGLE"
   associable_types = [
     "VirtualMachine",
