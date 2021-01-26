@@ -71,7 +71,7 @@ variable "ansible" {
     aviConfigureTag = "v3.53"
     version = "2.9.12"
     opencartInstallUrl = "https://github.com/tacobayle/ansibleOpencartInstall"
-    opencartInstallTag = "v1.22"
+    opencartInstallTag = "v1.23"
     directory = "ansible"
     jsonFile = "~/fromTf.json"
     yamlFile = "~/fromTf.yml"

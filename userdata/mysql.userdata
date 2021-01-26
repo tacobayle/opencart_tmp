@@ -8,9 +8,6 @@ users:
     ssh_authorized_keys:
       - ${pubkey}
 
-packages:
-  - language-pack-en
-
 write_files:
   - content: |
       #!/bin/bash
@@ -39,14 +36,14 @@ write_files:
       sudo netplan apply
       sleep 20
       # apt config
-      sudo apt-get update
-      sudo apt install -y open-vm-tools
-      sudo apt install -y mysql-server
-      sudo apt install -y python-pip
-      sudo pip install --upgrade setuptools
-      sudo apt install -y python3-pip
-      pip3 install PyMySQL
-      pip install PyMySQL
+      #sudo apt-get update
+      #sudo apt install -y open-vm-tools
+      #sudo apt install -y mysql-server
+      #sudo apt install -y python-pip
+      #sudo pip install --upgrade setuptools
+      #sudo apt install -y python3-pip
+      #pip3 install PyMySQL
+      #pip install PyMySQL
       echo "cloud init done" | tee /tmp/cloudInitDone.log
     path: /opt/bootstrap.sh
     permissions: 0755
