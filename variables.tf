@@ -119,7 +119,7 @@ variable "opencart" {
     wait_for_guest_net_timeout = 2
     template_name = "ubuntu-bionic-18.04-cloudimg-template"
     opencartDownloadUrl = "https://github.com/opencart/opencart/releases/download/3.0.3.5/opencart-3.0.3.5.zip"
-    ipsData = ["100.64.130.201", "100.64.130.202"]
+    ipsData = ["100.64.130.221", "100.64.130.222"]
     netplanFile = "/etc/netplan/50-cloud-init.yaml"
     maskData = "/24"
     network = "vxw-dvs-34-virtualwire-117-sid-1080116-sof2-01-vc08-avi-dev113"
@@ -135,7 +135,7 @@ variable "mysql" {
     wait_for_guest_net_timeout = 2
     template_name = "ubuntu-bionic-18.04-cloudimg-template"
     netplanFile = "/etc/netplan/50-cloud-init.yaml"
-    ipsData = ["100.64.130.200"]
+    ipsData = ["100.64.130.220"]
     maskData = "/24"
     network = "vxw-dvs-34-virtualwire-117-sid-1080116-sof2-01-vc08-avi-dev113"
      }
