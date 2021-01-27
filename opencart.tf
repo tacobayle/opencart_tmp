@@ -11,7 +11,6 @@ data "template_file" "opencart_userdata" {
     pubkey       = file(var.jump["public_key_path"])
     ipData      = element(var.opencart.ipsData, count.index)
     opencartDownloadUrl = var.opencart["opencartDownloadUrl"]
-    domainName = var.vmw.domains[0].name
     netplanFile  = var.opencart.netplanFile
     maskData = var.opencart.maskData
   }

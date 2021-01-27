@@ -45,17 +45,17 @@ write_files:
       sudo apt install -y libmcrypt-dev
       sudo apt-get -y install unzip
       wget ${opencartDownloadUrl}
-      sudo mkdir /var/www/opencart.${domainName}/
-      sudo unzip $(basename ${opencartDownloadUrl}) -d /var/www/opencart.${domainName}/
-      sudo mv /var/www/opencart.${domainName}/upload/config-dist.php /var/www/opencart.${domainName}/upload/config.php
-      sudo mv /var/www/opencart.${domainName}/upload/.htaccess.txt /var/www/opencart.${domainName}/upload/.htaccess
-      sudo mv /var/www/opencart.${domainName}/upload/admin/config-dist.php /var/www/opencart.${domainName}/upload/admin/config.php
-      sudo rm -f /var/www/opencart.${domainName}/*
-      sudo mv -f /var/www/opencart.${domainName}/upload/* /var/www/opencart.${domainName}/
-      sudo mv -f /var/www/opencart.${domainName}/upload/.* /var/www/opencart.${domainName}/
-      sudo rmdir /var/www/opencart.${domainName}/upload/
-      sudo chmod -R 755 /var/www/opencart.${domainName}/
-      sudo chown -R www-data:www-data /var/www/opencart.${domainName}/
+      sudo mkdir /var/www/opencart/
+      sudo unzip $(basename ${opencartDownloadUrl}) -d /var/www/opencart/
+      sudo mv /var/www/opencart/upload/config-dist.php /var/www/opencart/upload/config.php
+      sudo mv /var/www/opencart/upload/.htaccess.txt /var/www/opencart/upload/.htaccess
+      sudo mv /var/www/opencart/upload/admin/config-dist.php /var/www/opencart/upload/admin/config.php
+      sudo rm -f /var/www/opencart/*
+      sudo mv -f /var/www/opencart/upload/* /var/www/opencart/
+      sudo mv -f /var/www/opencart/upload/.* /var/www/opencart/
+      sudo rmdir /var/www/opencart/upload/
+      sudo chmod -R 755 /var/www/opencart/
+      sudo chown -R www-data:www-data /var/www/opencart/
       echo "cloud init done" | tee /tmp/cloudInitDone.log
     path: /opt/bootstrap.sh
     permissions: 0755
