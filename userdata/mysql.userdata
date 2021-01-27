@@ -26,14 +26,14 @@ write_files:
       echo "            match:" | sudo tee -a ${netplanFile}
       echo "                macaddress: $macFirst" | sudo tee -a ${netplanFile}
       echo "            set-name: $ifaceFirstName" | sudo tee -a ${netplanFile}
-      echo "        $ifaceLastName:" | sudo tee -a ${netplanFile}
-      echo "            dhcp4: true" | sudo tee -a ${netplanFile}
-      #echo "            addresses: [${ipData}${maskData}]" | sudo tee -a ${netplanFile}
-      echo "            match:" | sudo tee -a ${netplanFile}
-      echo "                macaddress: $macLast" | sudo tee -a ${netplanFile}
-      echo "            set-name: $ifaceLastName" | sudo tee -a ${netplanFile}
-      echo "    version: 2" | sudo tee -a ${netplanFile}
-      sudo netplan apply
+      #echo "        $ifaceLastName:" | sudo tee -a ${netplanFile}
+      #echo "            dhcp4: true" | sudo tee -a ${netplanFile}
+      ##echo "            addresses: [${ipData}${maskData}]" | sudo tee -a ${netplanFile}
+      #echo "            match:" | sudo tee -a ${netplanFile}
+      #echo "                macaddress: $macLast" | sudo tee -a ${netplanFile}
+      #echo "            set-name: $ifaceLastName" | sudo tee -a ${netplanFile}
+      #echo "    version: 2" | sudo tee -a ${netplanFile}
+      #sudo netplan apply
       #sleep 20
       # apt config
       #sudo apt-get update
