@@ -117,8 +117,8 @@ variable "opencart" {
     disk = 20
     username = "ubuntu"
     wait_for_guest_net_timeout = 2
-    template_name = "ubuntu-focal-20.04-cloudimg-template"
-    opencartDownloadUrl = "https://github.com/opencart/opencart/releases/download/3.0.3.6/opencart-3.0.3.6.zip"
+    template_name = "ubuntu-bionic-18.04-cloudimg-template"
+    opencartDownloadUrl = "https://github.com/opencart/opencart/releases/download/3.0.3.5/opencart-3.0.3.5.zip"
     ipsData = ["100.64.130.221", "100.64.130.222"]
     netplanFile = "/etc/netplan/50-cloud-init.yaml"
     maskData = "/24"
