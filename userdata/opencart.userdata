@@ -46,7 +46,7 @@ write_files:
       sudo apt-get -y install unzip
       wget ${opencartDownloadUrl}
       sudo mkdir /var/www/opencart.${domainName}/
-      sudo unzip opencart-3.0.3.5.zip -d /var/www/opencart.${domainName}/
+      sudo unzip $(basename ${opencartDownloadUrl}) -d /var/www/opencart.${domainName}/
       sudo mv /var/www/opencart.${domainName}/upload/config-dist.php /var/www/opencart.${domainName}/upload/config.php
       sudo mv /var/www/opencart.${domainName}/upload/.htaccess.txt /var/www/opencart.${domainName}/upload/.htaccess
       sudo mv /var/www/opencart.${domainName}/upload/admin/config-dist.php /var/www/opencart.${domainName}/upload/admin/config.php
